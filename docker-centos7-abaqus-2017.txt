@@ -1,0 +1,12 @@
+Bootstrap: docker
+From: centos
+
+%post
+        yum -y update
+        yum -y install python
+
+%files
+        helloworld.py /
+
+%runscript
+        python /helloworld.py
